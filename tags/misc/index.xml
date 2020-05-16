@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Misc | Poor Statistician&#39;s Collection</title>
+    <link>https://shuguangsun.github.io/PoorStatistician/tags/misc/</link>
+      <atom:link href="https://shuguangsun.github.io/PoorStatistician/tags/misc/index.xml" rel="self" type="application/rss+xml" />
+    <description>Misc</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2020</copyright><lastBuildDate>Sat, 16 May 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://shuguangsun.github.io/PoorStatistician/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Misc</title>
+      <link>https://shuguangsun.github.io/PoorStatistician/tags/misc/</link>
+    </image>
+    
+    <item>
+      <title>New Wave</title>
+      <link>https://shuguangsun.github.io/PoorStatistician/post/getting-started/</link>
+      <pubDate>Sat, 16 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://shuguangsun.github.io/PoorStatistician/post/getting-started/</guid>
+      <description>&lt;p&gt;Getting Started!&lt;/p&gt;
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+&lt;p&gt;Copyright 2020-present Shuguang Sun.&lt;/p&gt;
+&lt;p&gt;Released under the 
+&lt;a href=&#34;https://github.com/gcushen/hugo-academic/blob/master/LICENSE.md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MIT&lt;/a&gt; license.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
