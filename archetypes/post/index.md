@@ -4,7 +4,7 @@
 title: "{{ replace .Name "-" " " | title }}"
 subtitle: ""
 summary: ""
-authors: [Shuguang Sun]
+authors: []
 tags: []
 categories: []
 date: {{ .Date }}
