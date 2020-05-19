@@ -67,4 +67,4 @@ user_groups:
 - Visitors
 ---
 
-A biostatistican in clinical development.
+A biostatistican.

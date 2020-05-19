@@ -67,4 +67,4 @@ user_groups:
 - Visitors
 ---
 
-Shuguang Sun is a biostatistican in clinical development.
+A biostatistican.
