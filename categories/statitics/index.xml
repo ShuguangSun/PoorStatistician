@@ -1,38 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Poor Statistician&#39;s Collection</title>
-    <link>https://shuguangsun.github.io/PoorStatistician/</link>
-      <atom:link href="https://shuguangsun.github.io/PoorStatistician/index.xml" rel="self" type="application/rss+xml" />
-    <description>Poor Statistician&#39;s Collection</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2020</copyright><lastBuildDate>Sun, 09 Aug 2020 15:11:26 +0800</lastBuildDate>
+    <title>statitics | Poor Statistician&#39;s Collection</title>
+    <link>https://shuguangsun.github.io/PoorStatistician/categories/statitics/</link>
+      <atom:link href="https://shuguangsun.github.io/PoorStatistician/categories/statitics/index.xml" rel="self" type="application/rss+xml" />
+    <description>statitics</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2020</copyright><lastBuildDate>Tue, 19 May 2020 18:24:26 +0800</lastBuildDate>
     <image>
       <url>https://shuguangsun.github.io/PoorStatistician/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
-      <title>Poor Statistician&#39;s Collection</title>
-      <link>https://shuguangsun.github.io/PoorStatistician/</link>
+      <title>statitics</title>
+      <link>https://shuguangsun.github.io/PoorStatistician/categories/statitics/</link>
     </image>
-    
-    <item>
-      <title>GNU/Linux - Manjaro</title>
-      <link>https://shuguangsun.github.io/PoorStatistician/post/tools/linux_manjaro/</link>
-      <pubDate>Sun, 09 Aug 2020 15:11:26 +0800</pubDate>
-      <guid>https://shuguangsun.github.io/PoorStatistician/post/tools/linux_manjaro/</guid>
-      <description>&lt;h2 id=&#34;用过的-linux-发行版&#34;&gt;用过的 Linux 发行版&lt;/h2&gt;
-&lt;p&gt;VI 是一款非常古老经典的编辑器，几乎每一个发行版的 Linux 都会默认安装。Stackoverflow 上有个经典的问题：如何退出 VI, 在线等！&lt;/p&gt;
-&lt;p&gt;初步接触 Linux 是大学期间，学校机房，充满好奇的点进了 Linux 系统，后来忘记了，不知道是不是很快就按硬件的关机键了。自从研究生时有了自己的电脑，又开始了 Linux 的探索。首先用了 Debian，然后是 Debian 系的 Ubuntu，现在又转到 Arch Linux 系的发行版 Manjaro。&lt;/p&gt;
-&lt;p&gt;对于新手用户，我还是推荐 Ubuntu，有大厂支持，用户友好，基本上装完就可以用了，而且细节也照顾的不错。比如，R 在 Ubuntu 里可以自由的选用不同的 Blas 支持，无论是 R 自带的 Blas，还是 OpenBlas，Intel 的 MKL，都可以简单的设置一下就可以切换。用户需要操心的就比较少。&lt;/p&gt;
-&lt;p&gt;而我转到 Manjaro 主要两个原因，次要的原因是默认的 Ubuntu 比较大，启动稍微慢点，主要原因是软件更新太慢，不是 snapshot 的&amp;mdash;-对于尝鲜派来说，这当然很重要。疫情的 3 月，开启许久没有用的电脑，Manjaro 联网升级，结果中间断了一下网，而我又进行了一些神操作，系统崩溃了&amp;mdash;-这就是尝鲜的代价&amp;mdash;-只能重新安装了一遍 Manjaro。现在是基于 XFCE 的桌面，启动也变慢了&amp;mdash;-想快还是需要用轻量级的 i3.&lt;/p&gt;
-&lt;h2 id=&#34;manjaro-的安装&#34;&gt;Manjaro 的安装&lt;/h2&gt;
-&lt;p&gt;现在各个 Linux 的发行版几乎都一致：网上现在安装文件，烧到 USB 里建成自启动的安装盘，然后插入电脑安装。也就是装到 USB 里稍微麻烦点，一般的工具都需要管理员权限。&lt;/p&gt;
-&lt;p&gt;安装需要注意的事情有两个，一是联网，最好找一下国内的镜像，毕竟有些组件要升级话，国内网络更快；二是硬盘分区，MBR，系统区，用户区，最好提前规划一下。比如我一开始硬盘没分区，系统区和用户区在一起，3 月份重装的时候就抓瞎了，最为一个 Linux 小白，我都不知道怎么把用户区的数据备份出来&amp;hellip;备份无论在什么地方都非常重要啊。&lt;/p&gt;
-&lt;p&gt;系统安装好基本就可以用了。需要的软件，也可以联网安装。或者是命令行，Debian 系的 apt，Arch 系的 pacman。如果不喜欢命令行，也有专门的图形界面的工具。&lt;/p&gt;
-&lt;h2 id=&#34;manjaro-的使用&#34;&gt;Manjaro 的使用&lt;/h2&gt;
-&lt;p&gt;我对自用机的需求比较简单，有 Emacs, R, python, 网络浏览器等就差不多了。当然对 GNU 以及更广泛的开源与不开源的世界来说，几乎就是用户有需求，就是实现&amp;mdash;-抛开好用不好用另说。&lt;/p&gt;
-&lt;p&gt;办公软件里也有不同的选择，Open/Free office，还有国产精品 WPS&amp;mdash;-没错，就是曾经将微软 Office 按在地上摩擦的 WPS。我是轻度的办公软件用户，对以上几个用的都不多，所以不做深入评论。&lt;/p&gt;
-&lt;p&gt;再一个是字体。随着互联网经济的蓬勃发展，字体也被随手解决了。Adobe 和 Google 合伙出来一套 CJK 字体，Adobe 叫思源，Google叫No豆腐。为什么说是与互联网经济有关呢？阿里也出了个普惠体，还有一个专门用于淘宝的字体&amp;mdash;-以前淘宝商铺好多广告因为字体原因被告侵权&amp;mdash;-于是就出一套字体解决了。&lt;/p&gt;
-&lt;p&gt;网络传言要在微信与Iphone之间二选一，这个还是比较简单的；而如果要在微信与Windows之间二选一呢？可惜腾讯对 Linux 的支持真的不给力，哪怕用 Wine 也需要花很多功夫。所以这是一个缺点。&lt;/p&gt;
-</description>
-    </item>
     
     <item>
       <title>p value and the 5% level</title>
@@ -140,19 +118,6 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/section&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>New Wave</title>
-      <link>https://shuguangsun.github.io/PoorStatistician/post/getting-started/</link>
-      <pubDate>Sat, 16 May 2020 00:00:00 +0000</pubDate>
-      <guid>https://shuguangsun.github.io/PoorStatistician/post/getting-started/</guid>
-      <description>&lt;p&gt;Getting Started!&lt;/p&gt;
-&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
-&lt;p&gt;Copyright 2020-present Shuguang Sun.&lt;/p&gt;
-&lt;p&gt;Released under the 
-&lt;a href=&#34;https://github.com/gcushen/hugo-academic/blob/master/LICENSE.md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MIT&lt;/a&gt; license.&lt;/p&gt;
 </description>
     </item>
     

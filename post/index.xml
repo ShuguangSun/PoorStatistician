@@ -5,12 +5,143 @@
     <link>https://shuguangsun.github.io/PoorStatistician/post/</link>
       <atom:link href="https://shuguangsun.github.io/PoorStatistician/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2020</copyright><lastBuildDate>Sat, 16 May 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2020</copyright><lastBuildDate>Sun, 09 Aug 2020 15:11:26 +0800</lastBuildDate>
     <image>
       <url>https://shuguangsun.github.io/PoorStatistician/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Posts</title>
       <link>https://shuguangsun.github.io/PoorStatistician/post/</link>
     </image>
+    
+    <item>
+      <title>GNU/Linux - Manjaro</title>
+      <link>https://shuguangsun.github.io/PoorStatistician/post/tools/linux_manjaro/</link>
+      <pubDate>Sun, 09 Aug 2020 15:11:26 +0800</pubDate>
+      <guid>https://shuguangsun.github.io/PoorStatistician/post/tools/linux_manjaro/</guid>
+      <description>&lt;h2 id=&#34;用过的-linux-发行版&#34;&gt;用过的 Linux 发行版&lt;/h2&gt;
+&lt;p&gt;VI 是一款非常古老经典的编辑器，几乎每一个发行版的 Linux 都会默认安装。Stackoverflow 上有个经典的问题：如何退出 VI, 在线等！&lt;/p&gt;
+&lt;p&gt;初步接触 Linux 是大学期间，学校机房，充满好奇的点进了 Linux 系统，后来忘记了，不知道是不是很快就按硬件的关机键了。自从研究生时有了自己的电脑，又开始了 Linux 的探索。首先用了 Debian，然后是 Debian 系的 Ubuntu，现在又转到 Arch Linux 系的发行版 Manjaro。&lt;/p&gt;
+&lt;p&gt;对于新手用户，我还是推荐 Ubuntu，有大厂支持，用户友好，基本上装完就可以用了，而且细节也照顾的不错。比如，R 在 Ubuntu 里可以自由的选用不同的 Blas 支持，无论是 R 自带的 Blas，还是 OpenBlas，Intel 的 MKL，都可以简单的设置一下就可以切换。用户需要操心的就比较少。&lt;/p&gt;
+&lt;p&gt;而我转到 Manjaro 主要两个原因，次要的原因是默认的 Ubuntu 比较大，启动稍微慢点，主要原因是软件更新太慢，不是 snapshot 的&amp;mdash;-对于尝鲜派来说，这当然很重要。疫情的 3 月，开启许久没有用的电脑，Manjaro 联网升级，结果中间断了一下网，而我又进行了一些神操作，系统崩溃了&amp;mdash;-这就是尝鲜的代价&amp;mdash;-只能重新安装了一遍 Manjaro。现在是基于 XFCE 的桌面，启动也变慢了&amp;mdash;-想快还是需要用轻量级的 i3.&lt;/p&gt;
+&lt;h2 id=&#34;manjaro-的安装&#34;&gt;Manjaro 的安装&lt;/h2&gt;
+&lt;p&gt;现在各个 Linux 的发行版几乎都一致：网上现在安装文件，烧到 USB 里建成自启动的安装盘，然后插入电脑安装。也就是装到 USB 里稍微麻烦点，一般的工具都需要管理员权限。&lt;/p&gt;
+&lt;p&gt;安装需要注意的事情有两个，一是联网，最好找一下国内的镜像，毕竟有些组件要升级话，国内网络更快；二是硬盘分区，MBR，系统区，用户区，最好提前规划一下。比如我一开始硬盘没分区，系统区和用户区在一起，3 月份重装的时候就抓瞎了，最为一个 Linux 小白，我都不知道怎么把用户区的数据备份出来&amp;hellip;备份无论在什么地方都非常重要啊。&lt;/p&gt;
+&lt;p&gt;系统安装好基本就可以用了。需要的软件，也可以联网安装。或者是命令行，Debian 系的 apt，Arch 系的 pacman。如果不喜欢命令行，也有专门的图形界面的工具。&lt;/p&gt;
+&lt;h2 id=&#34;manjaro-的使用&#34;&gt;Manjaro 的使用&lt;/h2&gt;
+&lt;p&gt;我对自用机的需求比较简单，有 Emacs, R, python, 网络浏览器等就差不多了。当然对 GNU 以及更广泛的开源与不开源的世界来说，几乎就是用户有需求，就是实现&amp;mdash;-抛开好用不好用另说。&lt;/p&gt;
+&lt;p&gt;办公软件里也有不同的选择，Open/Free office，还有国产精品 WPS&amp;mdash;-没错，就是曾经将微软 Office 按在地上摩擦的 WPS。我是轻度的办公软件用户，对以上几个用的都不多，所以不做深入评论。&lt;/p&gt;
+&lt;p&gt;再一个是字体。随着互联网经济的蓬勃发展，字体也被随手解决了。Adobe 和 Google 合伙出来一套 CJK 字体，Adobe 叫思源，Google叫No豆腐。为什么说是与互联网经济有关呢？阿里也出了个普惠体，还有一个专门用于淘宝的字体&amp;mdash;-以前淘宝商铺好多广告因为字体原因被告侵权&amp;mdash;-于是就出一套字体解决了。&lt;/p&gt;
+&lt;p&gt;网络传言要在微信与Iphone之间二选一，这个还是比较简单的；而如果要在微信与Windows之间二选一呢？可惜腾讯对 Linux 的支持真的不给力，哪怕用 Wine 也需要花很多功夫。所以这是一个缺点。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>p value and the 5% level</title>
+      <link>https://shuguangsun.github.io/PoorStatistician/post/pvalue/p-valueand05/</link>
+      <pubDate>Tue, 19 May 2020 18:24:26 +0800</pubDate>
+      <guid>https://shuguangsun.github.io/PoorStatistician/post/pvalue/p-valueand05/</guid>
+      <description>&lt;h2 id=&#34;火箭与马屁股&#34;&gt;火箭与马屁股&lt;/h2&gt;
+&lt;p&gt;在回答火箭与马屁股的关系时，有个&amp;quot;马屁股决定说&amp;rdquo;：火箭的部件由铁路运输；在设计之初，火车轨道的宽度沿用了马车的轮宽标准；马车的轮宽由老路上上的辙迹决定；而辙迹来源于罗马的战车，马拉战车。所以马屁股在一定时期来决定了火箭的运力。&lt;/p&gt;
+&lt;p&gt;这是一种&amp;quot;路径依赖&amp;quot;理论。&lt;/p&gt;
+&lt;h2 id=&#34;fisher-and-5-level&#34;&gt;Fisher and 5% level&lt;/h2&gt;
+&lt;p&gt;在早期，没有 5% 置信水平这个概念，各家采用各种界值。&lt;/p&gt;
+&lt;p&gt;Stigler (2008&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;) 考证了早期统计学的文献，认为 R. A. Fisher 在引入 5% 这一水平的过程中起了主要作用。Fisher 在其 1925 年的书&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;中需要用到一些分布表，即不同概率水平对应的统计量的值，比如正态分布表，可以提供 p = .01 到 .99 (间隔 .01) 以及 p = .001, .0001, &amp;hellip; 直至 .000000001，还有 t 分布表，是自由度 df = 1, 2, &amp;hellip;, 30, ∞ 和 p = .9, .8, .7, .6, .5, .4, .3, .2, .1, .05, .02, .01 的交叉表。而对于 F 分布，两个自由度，要想和正态或 t 分布表那样齐全，篇幅会非常非常大，所以 Fisher 在 1925 版的书里只提供了在不同自由度下 p = .05 对应的分布表。之后，在该书的第 3 版又增加了 p = 0.1 对应的分布表。1938 年的书&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;里又进一步的扩展到了 20% 至 0.1%。&lt;/p&gt;
+&lt;p&gt;想象一下，当我们做（协）方差分析 ANOVA 的时候，手头只有一本 Fisher 1925 年的书，除了 5% 还有别的什么选择？&lt;/p&gt;
+&lt;p&gt;为什么可以接受 5%? 忽略历史原因，20 里边出 1 个的优势 (Odds)，已经可以满足很多决策中的不确定性需求了。更何况，我们开始学数数的时候大都是从掰着 5 个手指头开始的，相对于 4 或者 6，更容易接受 5 一些。&lt;/p&gt;
+&lt;h2 id=&#34;ha-and-5-level&#34;&gt;HA and 5% level&lt;/h2&gt;
+&lt;p&gt;p-value ≤ 5% 是一个实际上的金标准，但是现实中 p = 0.05 并不是一个 &amp;ldquo;pass/fail&amp;rdquo; 的必备标准。抛开那些 Rare Disease 或桥接试验，也有一些例子中 p &amp;gt; 0.05 依然获得上市批准，比如 FDA 在 2017 年批准了 Portola 的 Bevyxxa。&lt;/p&gt;
+&lt;p&gt;该批准基于 APEX 这一入组 7,500 人的关键性研究。它由 3 个队列组成：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Cohort 1: D-dimer of 2 times the ULN or more&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Cohort 2: D-dimer of 2 times the ULN or more plus all patients age ≥75 years&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Cohort 3: Overall study population, all eligible patients&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;方案中规定了顺序检验方法：首先检验 Cohort 1；如果 Cohort 1 成功，才能检验 Cohort 2；Cohort 2 成功才能检验 Cohort 3。其结果是有争议的，在 Cohort 1 中 p-value 仅有 0.054 &amp;gt; 0.05，按理应该停止假设检验过程，在 5% 的水平下，Betrixiban 没有显著的比 Lovenox 优效。&lt;/p&gt;
+&lt;p&gt;Portola 基于 APEX 的整体结果，不算差的有效性数据 (&amp;ldquo;探索性分析&amp;quot;显示，Cohort 2 的 p-value 为 0.029，Cohort 3 总体人群的 p-value 为 0.006) ，较好的安全性，提交了注册申请，而最终也获得上市批准&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt; &lt;sup id=&#34;fnref:5&#34;&gt;&lt;a href=&#34;#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;RR&lt;/th&gt;
+&lt;th&gt;P value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Cohort 1: Elevated D-Dimer&lt;/td&gt;
+&lt;td&gt;0.806&lt;/td&gt;
+&lt;td&gt;0.054&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Cohort 2: Elevated D-dimer or age ≥75 years&lt;/td&gt;
+&lt;td&gt;0.800&lt;/td&gt;
+&lt;td&gt;0.029&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Overall study population&lt;/td&gt;
+&lt;td&gt;0.760&lt;/td&gt;
+&lt;td&gt;0.006&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;是否还需要-5&#34;&gt;是否还需要 5%?&lt;/h2&gt;
+&lt;p&gt;关于是否需要 5% 作为标准有很多争论。其中一种声音说：如果连 p-value 小于 5% 都不想达到，那还对要研发的药物有什么信心？特别是当我们在计划试验的时候。回想一下，对 5% 的质疑很多出自 1. 样本量太大想减小的时候，而样本量大有部分原因是因为预期的效应量就不大 2. 试验结果出来，p-value 比 0.05 大那么一点的时候。&lt;/p&gt;
+&lt;p&gt;归根结底，我们需要对证据的说服力进行评价。我很喜欢 &amp;ldquo;统计性&amp;rdquo; 这个说法，而不仅仅是一个数字。&lt;/p&gt;
+&lt;h2 id=&#34;asa-关于-p-value-的六个原则&#34;&gt;ASA 关于 p-value 的六个原则&lt;/h2&gt;
+&lt;p&gt;ASA (Wasserstein 2016&lt;sup id=&#34;fnref:6&#34;&gt;&lt;a href=&#34;#fn:6&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;6&lt;/a&gt;&lt;/sup&gt;) 关于 p-value 提出了 6 个 principles:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;P-values can indicate how incompatible the data are with a specified statistical model.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;P-values do not measure the probability that the studied hypothesis is true, or the probability that the data were produced by random chance alone.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Scientific conclusions and business or policy decisions should not be based only on whether a p-value passes a specific threshold.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Proper inference requires full reporting and transparency.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A p-value, or statistical significance, does not measure the size of an effect or the importance of a result.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;By itself, a p-value does not provide a good measure of evidence regarding a model or hypothesis.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&amp;ldquo;Well-reasoned statistical arguments contain much more than the value of a single number and whether that number exceeds an arbitrary threshold. The ASA statement is intended to steer research into a &amp;lsquo;post p&amp;lt;0.05 era.&#39;&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;以及&lt;/p&gt;
+&lt;p&gt;Good statistical practice is an essential component of good scientific practice, the statement observes, and such practice &amp;ldquo;emphasizes principles of good study design and conduct, a variety of numerical and graphical summaries of data, understanding of the phenomenon under study, interpretation of results in context, complete reporting and proper logical and quantitative understanding of what data summaries mean.&amp;rdquo;&lt;/p&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;Stigler, S. (2008). Fisher and the 5% level. CHANCE, 21(4), 12-12. &lt;a href=&#34;http://dx.doi.org/10.1007/s00144-008-0033-3&#34;&gt;http://dx.doi.org/10.1007/s00144-008-0033-3&lt;/a&gt; &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;Fisher, Ronald A. (1925). Statistical Methods for Research Workers (first ed.), Edinburgh: Oliver &amp;amp; Boyd. &lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;Fisher, Ronald A., and Yates, Francis (1938). Statistical Tables for Biological, Agricultural and Medical Research (first ed.), London: Oliver &amp;amp; Boyd. &lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:4&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;FDA (2017). &lt;a href=&#34;https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approved-betrixaban-bevyxxa-portola-prophylaxis-venous-thromboembolism-vte-adult-patients&#34;&gt;https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approved-betrixaban-bevyxxa-portola-prophylaxis-venous-thromboembolism-vte-adult-patients&lt;/a&gt; &lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:5&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;Oregon State University and Oregon Health Authority (2017). New Drug Evaluation: Betrixaban Capsules. &lt;a href=&#34;https://www.orpdl.org/durm/meetings/meetingdocs/2017_11_30/finals/Betrixaban_NDE.pdf&#34;&gt;https://www.orpdl.org/durm/meetings/meetingdocs/2017_11_30/finals/Betrixaban_NDE.pdf&lt;/a&gt; &lt;a href=&#34;#fnref:5&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:6&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;Wasserstein, R. L., &amp;amp; Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. The American Statistician, 70(2), 129-133. &lt;a href=&#34;http://dx.doi.org/10.1080/00031305.2016.1154108&#34;&gt;http://dx.doi.org/10.1080/00031305.2016.1154108&lt;/a&gt; &lt;a href=&#34;#fnref:6&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</description>
+    </item>
     
     <item>
       <title>New Wave</title>
