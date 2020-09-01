@@ -7,8 +7,8 @@ summary: ""
 authors: [Shuguang Sun]
 tags: [politics]
 categories: [politics]
-date: 2020-09-01T15:23:53+08:00
-lastmod: 2020-09-01T15:23:53+08:00
+date: 2020-09-01T19:23:53+08:00
+lastmod: 2020-09-01T20:03:18+08:00
 featured: false
 draft: false
 
@@ -30,7 +30,7 @@ projects: []
 
 ## 引言
 
-疫情，时间长，范围广，带来了各种层面的影响。
+2019年底突如其来的疫情，持续时间长，影响范围广，带来了各种层面的影响。
 
 ## 疫苗开发面临的挑战和要求
 
