@@ -1,14 +1,14 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Covid-19 疫苗研发 "
+title: "Covid-19 Vaccines Development"
 subtitle: ""
 summary: ""
 authors: [Shuguang Sun]
 tags: [politics]
 categories: [politics]
-date: 2020-09-01T19:23:53+08:00
-lastmod: 2020-09-01T19:23:53+08:00
+date: 2020-09-01T15:23:53+08:00
+lastmod: 2020-09-01T15:23:53+08:00
 featured: false
 draft: false
 
@@ -28,7 +28,7 @@ image:
 projects: []
 ---
 
-# 引言
+## 引言
 
 疫情，时间长，范围广，带来了各种层面的影响。
 
