@@ -28,6 +28,5 @@ cd public && git add --all && git commit -m "Publishing to gh-pages (publish.sh)
 #echo "Pushing to github"
 # git push --all
 # git push --all gitee
-# git push --force-with-lease gitee gh-pages:gh-pages
+git push --force-with-lease gitee gh-pages:gh-pages
 # git push --force gitee gh-pages:gh-pages
-

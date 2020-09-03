@@ -76,15 +76,15 @@ Portola 基于 APEX 的整体结果，不算差的有效性数据 ("探索性分
 
 ASA (Wasserstein 2016[^6]) 关于 p-value 提出了 6 个 principles:
 
-1. P-values can indicate how incompatible the data are with a specified statistical model. 
+1. P-values can indicate how incompatible the data are with a specified statistical model.
 
-2. P-values do not measure the probability that the studied hypothesis is true, or the probability that the data were produced by random chance alone. 
+2. P-values do not measure the probability that the studied hypothesis is true, or the probability that the data were produced by random chance alone.
 
-3. Scientific conclusions and business or policy decisions should not be based only on whether a p-value passes a specific threshold. 
+3. Scientific conclusions and business or policy decisions should not be based only on whether a p-value passes a specific threshold.
 
-4. Proper inference requires full reporting and transparency. 
+4. Proper inference requires full reporting and transparency.
 
-5. A p-value, or statistical significance, does not measure the size of an effect or the importance of a result. 
+5. A p-value, or statistical significance, does not measure the size of an effect or the importance of a result.
 
 6. By itself, a p-value does not provide a good measure of evidence regarding a model or hypothesis.
 
@@ -95,6 +95,7 @@ ASA (Wasserstein 2016[^6]) 关于 p-value 提出了 6 个 principles:
 Good statistical practice is an essential component of good scientific practice, the statement observes, and such practice "emphasizes principles of good study design and conduct, a variety of numerical and graphical summaries of data, understanding of the phenomenon under study, interpretation of results in context, complete reporting and proper logical and quantitative understanding of what data summaries mean."
 
 
+## Reference
 
 [^1]: Stigler, S. (2008). Fisher and the 5% level. CHANCE, 21(4), 12-12. http://dx.doi.org/10.1007/s00144-008-0033-3
 
