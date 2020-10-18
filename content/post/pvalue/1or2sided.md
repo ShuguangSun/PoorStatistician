@@ -10,7 +10,7 @@ categories: [statitics]
 date: 2020-10-02T17:26:36+08:00
 lastmod: 2020-10-02T17:26:36+08:00
 featured: false
-draft: true
+draft: fasle
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
@@ -19,6 +19,8 @@ image:
   caption: ""
   focal_point: ""
   preview_only: false
+
+math: true
 
 # Projects (optional).
 #   Associate this post with one or more of your projects.
@@ -29,129 +31,107 @@ projects: []
 ---
 
 
-## 
+## 问题：One- or Two-Sided Test?
+
+Two-Sided Test 的简单形式 $H_0: \theta_1 = \theta_2$ v.s. $H_1: \theta_1 \neq \theta_2$，其检验的是参数是否为零，比如列联表中两治疗组见否有差异 (Row Mean Scores)，是否相关(Nonzero Correlation)，是否有关系 (General Association)等。按照常例，会将Two-Sided Test 的 p-value 与显著性水平（通常 $\alpha = 0.05$）进行比较，从而得到统计学结论。如果没有特别说明，我们看到的显著性水平 $\alpha = 0.05$ 都是指双侧的。
+
+One-Sided Test 的简单形式 $H_0: \theta_1 = \theta_2$ v.s. $H_1: \theta_1 > \theta_2$ 或者 $H_0: \theta_1 = \theta_2$ v.s. $H_1: \theta_1 < \theta_2$，其备择设有方向性，例如“无效” v.s. “有效”，或者有顺序的备择假设（组1 < 组2 < 组3）。单侧检验看起来更符合药物研发的很多场合，即“无效” v.s. “有效”（如果劣效，一步步淘汰，无法注册上市）。一个自然的问题：One-Sided Test 对应显著性水平是多少？相应的 单侧 p-value 继续与 $\alpha = 0.05$ 进行比较，还是与 $\alpha = 0.025$？如果是后者似乎很吃亏，Odds 都是二十分之一，为什么要为不感兴趣的“劣效”付出代价？比如Koch和Billings (1988^[^1]) 证明在正态假设下，当显著性水平为5%，把握度为80%和90%, 双侧检验和单侧检验所需要的样本量分别增长27%和23%，虽然样本量只增加了大约 1/4，但是成本（时间、人力、金钱等各方面）会显著增加。
+
+## 回答：ICH E9
+
+> It is important to clarify whether one- or two-sided tests of statistical
+> significance will be used, and in particular to justify prospectively the use
+> of one-sided tests. If hypothesis tests are not considered appropriate, then
+> the alternative process for arriving at statistical conclusions should be
+> given. The issue of one-sided or two-sided approaches to inference is
+> controversial and a diversity of views can be found in the statistical
+> literature. The approach of setting type I errors for one-sided tests at half
+> the conventional type I error used in two-sided tests is preferable in
+> regulatory settings. This promotes consistency with the two-sided confidence
+> intervals that are generally appropriate for estimating the possible size of
+> the difference between two treatments.
+
+曾经战斗力为 5 的我，天真的以为单边检验的 p-value 可以跟 $\alpha = 0.05$ 进行比较，就被现实教育了。
 
 
-## ICH E9
+## 与α有关的讨论
 
-"It is important to clarify whether one- or two-sided tests of statistical
-significance will be used, and in particular to justify prospectively the use of
-one-sided tests. If hypothesis tests are not considered appropriate, then the
-alternative process for arriving at statistical conclusions should be given. The
-issue of one-sided or two-sided approaches to inference is controversial and a
-diversity of views can be found in the statistical literature. The approach of
-setting type I errors for one-sided tests at half the conventional type I error
-used in two-sided tests is preferable in regulatory settings. This promotes
-consistency with the two-sided confidence intervals that are generally
-appropriate for estimating the possible size of the difference between two
-treatments."
+正如ICH E9所指出的，关于使用单侧方法还是使用双侧方法的讨论由来已久。其中最广泛的讨论是，为什么不用0.05下的单侧检验。虽然已有结论，但了解讨论的观点和论据也很有用处。
+
+Georgi Z. Georgiev（<Statistical Methods in Online A/B Testing>的作者）的[Onesided.org](https://www.onesided.org/)。网站给出了很多文章和[文献](https://www.onesided.org/literature/)（包括For one-sided statistical tests，Against one-sided statistical tests和Regulatory guidelines等），可以作为一个起点---虽然我不认同其中的一些观点或例子。其中几篇文章是对历史的回顾，比如[Fisher, Neyman & Pearson: Advocates for One-Sided Tests and Confidence Intervals](https://www.onesided.org/articles/fisher-neyman-pearson-advocates-one-sided-tests-confidence-intervals.php)，包括了Fisher和Neyman对one-sided vs two-sided tests的一些态度。另外[Reasons for misunderstanding and misapplication of one-sided tests](https://www.onesided.org/articles/reasons-for-misunderstanding-and-misapplication-of-one-sided-tests.php)也是一个汇总。
 
 
-https://www.invespcro.com/blog/one-tailed-vs-two-tailed-a-b-testing-everything-you-possibly-need-to-know/
+Peace, K. E. (1991[^2]) 汇总了ASA 1990年年会一个Session的讨论，最终作者认为
 
-https://blogs.oracle.com/marketingcloud/the-difference-between-one-tailed-two-tailed-testing
+> "Whether a one-sided or a two-sided p value should be used for reporting the results of an analysis should be determined by the a priori question the investigation seeks to answer. It is concluded that one-sided p values are appropriate in clinical trials whose objective is to provide definitive, confirmatory evidence of efficacy of pharmaceutical compounds."
 
-“If you’re running a test and only using a one-tailed test, you will only see significance if your new variant outperforms the default. There are 2 outcomes: the new variants win or we cannot distinguish it from the default.”
+文中也指出反方的一个观点 
 
-https://www.cliffsnotes.com/study-guides/statistics/principles-of-testing/one-and-twotailed-tests
+> "Some individuals with whom I've spoken about the one-sided or two-sided p-value issue, use in support of two-sided p values the fact that one does not know at the outset whether drug will be superior or inferior to placebo. And if the trial is conducted with a one-sided alternative that reflects superiority of the drug, and it turns out that when the trial is conducted, placebo is numerically better than the drug, one cannot say anything about such an event."
 
-“The decision of whether to use a one‐ or a two‐tailed test is important because a test statistic that falls in the region of rejection in a one‐tailed test may not do so in a two‐tailed test, even though both tests use the same probability level.”
+同时也指出，I类错误通常被认为是 "**regulatory risk**" 或 "**consumer's risk**"，而II类错误通常被认为是 "drug sponsor's risk"，监管部门接受双侧5%的regulatory risk，实际上是单侧2.5%.
 
-“One-tailed test represents that the estimated test parameter is greater or less than the critical value. When the sample tested falls in the region of rejection, i.e. either left or right side, as the case may be, it leads to the acceptance of alternative hypothesis rather than the null hypothesis.”
+> There should be consistency between sidedness of the regulatory or consumer's risk and the design of definitive proof of efficacy trials to be submitted to support the application. For regulatory authorities to operate on a two-sided 5% regulatory risk is in fact operating on a 2.5% level. Regulatory authorities are free to choose the consumer risk level. Personally, I would much prefer such a risk to be 2.5%, and one-sided tests adopted for the efficacy requirement, than what is currently the practice.
 
-Cons for one-tailed tests
+（报告中提供单侧 p value，而不是双侧 p value）
 
-Let’s assume that in reality \rho _{C}>\rho _{N} so the new design is worse than the current one. Then if you use the wrong direction of a one-tailed test (right- instead of left-sided), you will be not able to reject the null hypothesis that both designs are equally good.
+Fisher, L. D. (1991[^3])的落脚点更多是与placebo control的研究，指出一种情况在美国注册有可能要求两个阳性研究，这种情况下单侧 0.05是否更合适。
 
-If you would like to compute 95 percent confidence interval (95%CI) for the true difference between the two rates, note that in case of 1-sided test it is infinite from one side.
+> As an FDA physician once said, the level of proof needed is not the 1 in 20 of the null hypothesis in one trial at the 0.05 level, but rather 1 in 20 squared, or 1 in 400. In actuality both trials need to reject the null hypothesis in the correct direction. Thus with two-sided tests one is working at the 1 in 1600 level for the approval of a drug. This seems a rather rigorous level of proof.
 
-So for right-sided test 95%CI looks like [number, +∞) and (-∞, number] for the left-sided test.
-Cons for two-tailed tests
-
-When the conversion rate of the control and the conversion rate of the variation are not equal, but the difference between them is very small, you will not be able to detect this scenario since you “spend” all the power on both sides instead of one.
-
-Let’s summarize the advantages and disadvantages of both methods:
-
-Bad and good habits when it comes to one-tailed vs. two-tailed A/B tests
-
-    Use a two-tailed test when you do not have a clue which one is a better approach for your specific situation.
-    Do not conduct one after the other. If you are not able to reject the null hypothesis in 2-sided test (with less power) you will not be able to reject it with a one-tailed test (more power).
-    Do not conduct 1-sided test after 2-sided. If you were able to reject the null in a two-tailed test you will be able to reject it in a one-tailed too (with the right side of the association chosen).
-    Conduct a one-tailed test if your 2-tailed test was not enough powered.
-    If you do not have a strong evidence that the new design is better than the current one use two-sided test to account for both possible: harmful and beneficial effects of a new design.
-    Most software uses 2-sided tests but it is very easy to use them to conduct the one-sided test. In order to do it, it is enough to multiply your current significance level for the 2-sided test by 2\alpha. So, use\alphainstead of.
+两个独立阳性研究要求更多是为了避免意外。
 
 
-https://www.onesided.org/articles/the-paradox-of-one-sided-v-two-sided-tests-of-significance.php
+1. In a situation where at least two positive placebo-controlled trials are needed, one-sided tests are the appropriate model.
 
-The paradox of one-sided vs. two-sided tests of significance
+作者认为，对于一些存在较大不确定性的研究，比如非典型患者等，“Mysterious things can happen in one study”，所以认可需要两个研究、1/400，认为单侧检验就够了.
 
-How can one be less certain that there is any difference than that there is difference in a specified direction?
+2. When only one placebo-controlled trial may ethically be performed if the result is positive the amount of evidence required is of more concern and the answer is not as clear cut. I lean toward one-sided trials at the 0.05 significance level if the preliminary evidence and biological understanding are firm; otherwise, a significance level of 0.025 is appropriate.
 
-https://www.onesided.org/articles/widespread-usage-of-two-sided-tests-result-of-usability-issue.php
-Is the widespread usage of two-sided tests a result of a usability/presentation issue?
+作者在讨论中，还是强调了各方面的支持性证据是否足够强。
 
-In short, I believe that a significant reason for the preference for two-sided tests over one-sided ones is how the famous Fisher tables of the T-distribution, Z-distribution and X2 distribution were tabulated and presented.
+3. For active control trials there is usually sponsor and regulatory interest if the new compound is better than the active control --- and the sponsor will wish to use this fact in marketing if it is true. Here two-sided trials seem most appropriate.
 
+（现实是都是双侧 0.05 或者单侧 0.025）
 
-https://www.onesided.org/articles/examples-of-improper-use-of-two-sided-hypotheses.php
+Moyé和Tita (2002[^4]) 更认可双侧检验，
 
-Improper use of two-tailed tests in clinical and pharmacological trials
+> We argue here, however, that one-tailed testing should be avoided in healthcare research for ethical and cost-efficiency reasons, especially in randomized trials in which the investigator controls the intervention. Rather than reflecting the investigators' a priori intuition, the type I error should reflect the uncertainty of the research effort's future conclusions. This is critical in a field in which healthcare practitioners and healthcare researchers can inadvertently do harm to their patients.
 
-First, I present an example from a large breast-cancer trial (ALTTO): "Adjuvant Lapatinib and Trastuzumab for Early Human Epidermal Growth Factor Receptor 2–Positive Breast Cancer: Results From the Randomized Phase III Adjuvant Lapatinib and/or Trastuzumab Treatment Optimization Trial" by Piccart-Gebhart et al. (2016) [1]. The goals of the trial involving 8381 patients was to test the promising adjuvant Lapatinib (L) in combination with standard therapy with trastuzumab (T) for effects in improving outcomes for metastatic human epidermal growth factor 2-positive breast cancer.
+作者认为单侧检验并不能够减少总体样本量。单侧0.05的证据等级较低，从伦理上和科学上可能需要需要其的重现性 --- 也就是说需要两个独立的阳性研究，这样反而需要更多的样本量。
 
-Eyebrowes will certainly be raised when one reads that in planning the study "Sample size calculations focused on the two-sided superiority comparison between the L+T arm and the T arm". I thought "two-sided superiority" might have been a typing mistake, since it makes zero sense, but the authors are yet to respond to my inquiry into their paper. If it was not a typo, then I cannot fathom how a non-directional two-sided alternative can at the same time be a superiority (directional) one as well. This is far from the major issue, though.
+> Such a two-tailed study requires only 63% of the requisite total sample size for 2 separate one-sided studies, everything else being equal...
 
-The authors report that "In the ITT population, a 16% reduction in the hazard of a DFS event was observed with L+T compared with T, but this effect was modest, not statistically significant at .025, and of little clinical significance in consideration of the additional toxicity" and similarly make the conclusion that "Adjuvant treatment that includes L did not significantly improve DFS compared with T alone and added toxicity. One year of adjuvant T remains standard of care.".
+另外一点与Peace, K. E. (1991[^2])中的一点类似，如果最终结果的方向与单侧假设的备择方向相反怎么解释？这样的研究能提供什么信息？
 
-However, despite making claims about reduction of the hazard ratio, the paper only presents two-sided confidence intervals at 97.5% (due to a correction for the three initial arms) while what should have been presented was a one-sided interval. Such an interval does exclude an HR of 1 (upper-bound of 0.98) making the result statistically significant. The reported p-value of 0.048 was also two-sided, while a one-sided p-value of 0.024 would have just passed the requirement for p < 0.025 (I actually get 0.017 using the same numbers, not sure why). Therefore the claim for a reduction in HR is in fact statistically significant, contrary to what the paper states.
+Ruxton, G. D.和Neuhäuser, M. (2010[^5]) 给出了一些何时使用单侧检验的意见：
 
-Whether the up to ~45% reduction in the hazard ratio (lower bound of a one-sided 97.5% interval) is of substantive significance and whether it offsets the observed side effects is a different story, but the fact is that the L+T arm was in fact statistically significantly better than the T arm at the risk level adopted by the researchers and it should have been reported as such. Decision makers such as regulatory bodies, physicians and patients can then make up their own mind based on their particular circumstances and risk tolerance. However, this can hardly happen when the reported error estimate is not related to the claim and conclusion of the paper.
+1. Although one‐tailed hypothesis tests are commonly used, clear justification for why this approach is used is often missing from published papers.
 
+2. Here we suggest explicit questions authors should ask of themselves when deciding whether or not to adopt one‐tailed tests.
 
-https://www.onesided.org/articles/refining-statistical-guidelines-requirements-one-sided-tests.php
+3. First, we suggest that authors should only use a one‐tailed test if they can explain why they are more interested in an effect in one direction and not the other.
 
-Refining statistical guidelines and requirements for one-sided tests
+4. We suggest a further requirement that adoption of one‐tailed testing requires an explanation why the authors would treat a large observed difference in the unexpected direction no differently from a difference in the expected direction that was not strong enough to justify rejection of the null hypothesis.
 
-he FDA does so in its "Statistical Guidance on Reporting Results from Studies Evaluating Diagnostic Tests" while the EMA outlines its recommendations in "Statistical Principles for Clinical Trials".
+5. These justifications should be included in published works that use one‐tailed tests, allowing editors, reviewers and readers the ability to evaluate the appropriateness of the adoption of one‐tailed testing.
 
-The FDA guidelines
+6. We feel that adherence to our suggestions will allow authors to use one‐tailed tests more appropriately, and readers to form their own opinion about such appropriateness when one‐tailed tests are used.
 
-The FDA guidelines [1] do not specify risk explicitly, but they do require the reporting of 95% two-sided intervals "FDA recommends you report measures of diagnostic accuracy (sensitivity and specificity pairs, positive and negative likelihood ratio pairs) or measures of agreement (percent positive agreement and percent negative agreement) and their two-sided 95 percent confidence intervals.". I’ve seen people draw from this that regulatory risk is set at 5% but given that a drug that is harmful or increases risk will never be approved the actual risk is 2.5% when the one-sided statistic corresponding to such claims is calculated. I believe it will be beneficial for all parties if it is expressed as such explicitly.
+## 统计量
 
-Doing so will encourage the reporting of one-sided tests where appropriate, meaning almost universally. The medical literature will finally be more at ease in reporting the error probability statistics that match its claims.
-The EMA guidelines
+检验统计量与p value也有关系，比如$\chi^2$、$F$统计量，对应的p value本身是单侧的，但是检验却可能是双侧的，比如列联表的卡方检验和组间比例的差值、RR、OR等。分布之间有关系，比如正态分布变量的平方服从自由度为1的卡方分布；不同的检验统计量之间有互通的关系，比如某些模型下边的似然比检验的渐近卡方统计量与系数的渐近正态统计量。所以单侧还是双侧跟所用的统计量也有关系，这也是为什么很多讨论集中在疗效，也有些例子里是HR。
 
-The EMA guidelines [2] are more explicit as they state that "Conventionally the probability of type I error is set at 5% or less or as dictated by any adjustments made necessary for multiplicity considerations;". They are wise to continue this with "the precise choice may be influenced by the prior plausibility of the hypothesis under test and the desired impact of the results. [...] Alternative values to the conventional levels of type I and type II error may be acceptable or even preferable in some cases.". I read this as a clear acknowledgement that there is nothing special about the 5% boundary, which is a good thing.
+Adaptive Design方法中需要多次分析结果的合并，有基于p value的，也有基于统计量的，比如Group Sequential，需要知道多次分析的统计量之间的联合分布。如果是基于正太统计量的分析，在认可双侧5%或单侧2.5%的水平的基础上，一般而言，选择双侧检验还是单侧检验，样本量是相同的。
 
-Then we can read, regarding one-sided tests: "The approach of setting type I errors for one-sided tests at half the conventional type I error used in two-sided tests is preferable in regulatory settings." after stating that "It is important to clarify whether one- or two-sided tests of statistical significance will be used, and in particular to justify prospectively the use of one-sided tests."
+## Reference
 
-The justification of using one-sided tests is not at all needed, as already discussed. The second sentence basically means that maximum regulatory risk is in fact set at 2.5% for claims of benefit, non-inferiority, equivalence, harm, increased or decreased risk, etc. same as the FDA’s.
+[^1]: Koch, G. C., Gillings, D. B. (1988). Tests, one-sided versus two-sided. In: Encyclopedia of Statistical Sciences, 9, 218-222.. Wiley, New York, 
 
-My recommendation to EMA would be to make the maximum 2.5% risk explicit and clear and to drop the requirement for special justifications for using one-sided tests as none such precautions are needed. As we know, it is a myth that a one-sided test is somehow biased or would result in more false positives.
-The EFSA guidelines
+[^2]: Peace, K. E. (1991). One-sided or two-sided p values: which most appropriately address the question of drug efficacy? Journal of Biopharmaceutical Statistics, 1(1), 133–138. http://dx.doi.org/10.1080/10543409108835010
 
-I’ve also looked at the EFSA (European Food Safety Authority) guidelines ("Guidance on Statistical Reporting") [3] and I did not find any hint of a universal regulatory risk minimum and barely anything about one-sided vs. two-sided tests:
+[^3]: Fisher, L. D. (1991). The use of one-sided tests in drug trials: an FDA advisory committee member's perspective. Journal of Biopharmaceutical Statistics, 1(1), 151–156. http://dx.doi.org/10.1080/10543409108835012
 
-"For estimation, the interval estimate to be used should be specified and justified (e.g. confidence or credible interval, level of probability, whether one- or two-sided).".
+[^4]: Lemuel A. Moyé, & Tita, A. T. (2002). Defending the rationale for the two-tailed test in clinical research. Circulation, 105(25), 3062–3065. http://dx.doi.org/10.1161/01.CIR.0000018283.15527.97
 
-I think EFSA are erring on the cautious side here, but at least both one- and two-sided intervals are put on the same level of need for justification. I believe "justification" is too strong a word and I think so long as the null hypothesis is specified there is no need for any further justification. If the claim being supported is directional and of the same direction as the computed estimate there should be no issues and no need for explicit justification.
-The EPA guidelines
-
-The US Environmental Protection Agency (EPA) statistical guidebook is "Data Quality Assessment: Statistical Methods for Practitioners" [4]. It almost has the format of a textbook with formulas, examples, etc. They do not set any regulatory risk standards, but they mention that the levels 90%, 95% and 99% might be important for decisions makers.
-
-The guideline contains clear endorsement of using one-sided tests and many examples of doing so using their very well laid out statistical tables. In fact, the only fault I could find with it was a poor attempt to provide an example for when a two-sided test was appropriate since such a test was put forward as supporting a clearly one-sided claim about the efficiency of a treatment for reducing contamination in an area.
-
-I’m sure there are other guidelines in different agencies around the world that can be used as positive examples or as cases in which significant improvement can be achieved. It is certainly not within my interests to cover them all, but I believe the examples and brief notes given here would be helpful in writing better statistical guidelines.
-References:
-
-[1] US Food and Drug Administration (FDA): "Statistical Guidance on Reporting Results from Studies Evaluating Diagnostic Tests", drafted in 2003, issued on March 13, 2007.
-
-[2] European Medicines Agency (EMA): "Statistical Principles for Clinical Trials", drafted 1997, issued Mar 1998.
-
-[3] European Food Safety Authority (EFSA) (2014) "Guidance on Statistical Reporting", EFSA Journal 12(12):3908
-
-[4] US Environmental Protection Agency (EPA) "Data quality assessment: statistical methods for practitioners", EPA QA/G-9S, issued Feb 2006
-
-
-https://www.onesided.org/literature/
+[^5]: Ruxton, G. D., & Neuhäuser, M. (2010). When should we use one-tailed hypothesis testing? Methods in Ecology and Evolution, 1(2), 114–117. http://dx.doi.org/10.1111/j.2041-210X.2010.00014.x
