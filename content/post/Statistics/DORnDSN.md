@@ -6,7 +6,7 @@ subtitle: ""
 summary: ""
 authors: [Shuguang Sun]
 tags: [dor,methodology]
-categories: [statitics]
+categories: [statistics]
 date: 2020-10-09T11:31:24+08:00
 lastmod: 2020-10-09T12:54:51+08:00
 featured: false

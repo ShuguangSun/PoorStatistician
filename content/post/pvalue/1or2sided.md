@@ -6,7 +6,7 @@ subtitle: ""
 summary: ""
 authors: [Shuguang Sun]
 tags: [pvalue]
-categories: [statitics]
+categories: [statistics]
 date: 2020-10-02T17:26:36+08:00
 lastmod: 2020-10-02T17:26:36+08:00
 featured: false
@@ -98,7 +98,7 @@ Moyé和Tita (2002[^4]) 更认可双侧检验，
 
 > We argue here, however, that one-tailed testing should be avoided in healthcare research for ethical and cost-efficiency reasons, especially in randomized trials in which the investigator controls the intervention. Rather than reflecting the investigators' a priori intuition, the type I error should reflect the uncertainty of the research effort's future conclusions. This is critical in a field in which healthcare practitioners and healthcare researchers can inadvertently do harm to their patients.
 
-作者认为单侧检验并不能够减少总体样本量。单侧0.05的证据等级较低，从伦理上和科学上可能需要需要其的重现性 --- 也就是说需要两个独立的阳性研究，这样反而需要更多的样本量。
+作者认为单侧检验并不能够减少总体样本量。单侧0.05的证据等级较低，从伦理上和科学上可能需要其的重现性 --- 也就是说需要两个独立的阳性研究，这样反而需要更多的样本量。
 
 > Such a two-tailed study requires only 63% of the requisite total sample size for 2 separate one-sided studies, everything else being equal...
 
@@ -120,7 +120,7 @@ Ruxton, G. D.和Neuhäuser, M. (2010[^5]) 给出了一些何时使用单侧检�
 
 ## 统计量
 
-检验统计量与p value也有关系，比如$\chi^2$、$F$统计量，对应的p value本身是单侧的，但是检验却可能是双侧的，比如列联表的卡方检验和组间比例的差值、RR、OR等。分布之间有关系，比如正态分布变量的平方服从自由度为1的卡方分布；不同的检验统计量之间有互通的关系，比如某些模型下边的似然比检验的渐近卡方统计量与系数的渐近正态统计量。所以单侧还是双侧跟所用的统计量也有关系，这也是为什么很多讨论集中在疗效，也有些例子里是HR。
+检验统计量与p value也有关系，比如$\chi^2$、$F$统计量，对应的p value本身是单侧的（即大于等于统计量的值的概率），但是检验却可能是双侧的（即等与不等、是与不是等），比如列联表的卡方检验和组间比例的差值、RR、OR等。分布之间有关系，比如正态分布变量的平方服从自由度为1的卡方分布；不同的检验统计量之间有互通的关系，比如某些模型下边的似然比检验的渐近卡方统计量与系数的渐近正态统计量。所以单侧还是双侧跟所用的统计量也有关系，这也是为什么很多讨论集中在疗效，也有些例子里是HR。
 
 Adaptive Design方法中需要多次分析结果的合并，有基于p value的，也有基于统计量的，比如Group Sequential，需要知道多次分析的统计量之间的联合分布。如果是基于正太统计量的分析，在认可双侧5%或单侧2.5%的水平的基础上，一般而言，选择双侧检验还是单侧检验，样本量是相同的。
 

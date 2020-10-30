@@ -6,7 +6,7 @@ subtitle: ""
 summary: ""
 authors: [Shuguang Sun]
 tags: [pvalue]
-categories: [statitics]
+categories: [statistics]
 date: 2020-05-19T18:24:26+08:00
 lastmod: 2020-05-19T14:43:17+08:00
 featured: false
