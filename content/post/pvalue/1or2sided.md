@@ -118,6 +118,14 @@ Ruxton, G. D.和Neuhäuser, M. (2010[^5]) 给出了一些何时使用单侧检�
 
 6. We feel that adherence to our suggestions will allow authors to use one‐tailed tests more appropriately, and readers to form their own opinion about such appropriateness when one‐tailed tests are used.
 
+
+Bland, J. M. 和Bland, D. G. (1994[^6]) 认为 
+
+> In general a one sided test is appropriate when a large difference in one direction would lead to the same action as no difference at all. Expectation of a difference in a particular direction is not adequate justification. In medicine, things do not always work out as expected, and researchers may be surprised by their results.
+
+> Two sided tests should be used unless there is a very good reason for doing otherwise. If one sided tests are to be used the direction of the test must be specified advance. One sided tests should never be used simple as a device to make a conventional non-significant difference significant.
+
+
 ## 统计量
 
 检验统计量与p value也有关系，比如$\chi^2$、$F$统计量，对应的p value本身是单侧的（即大于等于统计量的值的概率），但是检验却可能是双侧的（即等与不等、是与不是等），比如列联表的卡方检验和组间比例的差值、RR、OR等。分布之间有关系，比如正态分布变量的平方服从自由度为1的卡方分布；不同的检验统计量之间有互通的关系，比如某些模型下边的似然比检验的渐近卡方统计量与系数的渐近正态统计量。所以单侧还是双侧跟所用的统计量也有关系，这也是为什么很多讨论集中在疗效，也有些例子里是HR。
@@ -135,3 +143,5 @@ Adaptive Design方法中需要多次分析结果的合并，有基于p value的�
 [^4]: Lemuel A. Moyé, & Tita, A. T. (2002). Defending the rationale for the two-tailed test in clinical research. Circulation, 105(25), 3062–3065. http://dx.doi.org/10.1161/01.CIR.0000018283.15527.97
 
 [^5]: Ruxton, G. D., & Neuhäuser, M. (2010). When should we use one-tailed hypothesis testing? Methods in Ecology and Evolution, 1(2), 114–117. http://dx.doi.org/10.1111/j.2041-210X.2010.00014.x
+
+[^6]: Bland, J. M., & Bland, D. G. (1994). Statistics notes: one and two sided tests of significance. BMJ, 309(6949), 248. http://dx.doi.org/10.1136/bmj.309.6949.248
