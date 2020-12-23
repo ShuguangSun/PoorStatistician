@@ -5,7 +5,7 @@ title: "ess-view-data:  View data support for ESS"
 subtitle: ""
 summary: ""
 authors: [Shuguang Sun]
-tags: [Emacs, ESS]
+tags: [Emacs, ESS, R]
 categories: [Tools]
 date: 2020-10-30T23:09:51+08:00
 lastmod: 2020-10-31T17:33:52+08:00
@@ -43,7 +43,7 @@ projects: []
 
 ![reddit1](ess-reddit-reply.png)
 
-以此可以看出Emacs的 All in One 有多顽固，以及，世界太大，哪怕一个人的小小需求也可能有上百人有同样的需求：
+以此可以看出Emacs用户的 All in One 观念有多顽固，以及，世界太大，哪怕一个人的小小需求也可能有上百人有同样的需求：
 
 ![elpa1](ess-100.png)
 
